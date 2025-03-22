@@ -6,7 +6,6 @@ const server = require('../server');
 chai.use(chaiHttp);
 
 suite('Functional Tests', function () {
-  this.timeout(5000);
 
   let testId; 
 
