@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 const IssueSchema = new mongoose.Schema({
-  project: String, // Track the project name
+  project: String, 
   issue_title: { type: String, required: true },
   issue_text: { type: String, required: true },
   created_on: { type: Date, default: Date.now },
