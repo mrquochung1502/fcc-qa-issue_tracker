@@ -164,10 +164,10 @@ suite('Functional Tests', function () {
     test('Delete an issue with an invalid _id', function (done) {
       chai.request(server)
         .delete('/api/issues/test')
-        .send({ _id: 'invalidid' })
+        .send({ _id: 'invalid_id' })
         .end(function (err, res) {
           assert.equal(res.status, 200);
-          assert.deepEqual(res.body, { error: 'could not delete', _id: 'invalidid' });
+          assert.deepEqual(res.body, { error: 'could not delete', _id: 'invalid_id' });
           done();
         });
     });
