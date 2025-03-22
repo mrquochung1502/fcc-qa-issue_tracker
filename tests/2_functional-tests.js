@@ -139,10 +139,10 @@ suite('Functional Tests', function () {
     test('Update an issue with an invalid _id', function (done) {
       chai.request(server)
         .put('/api/issues/test')
-        .send({ _id: 'invalidid123', issue_text: 'Invalid Update' })
+        .send({ _id: 'invalid_id123', issue_text: 'Invalid Update' })
         .end(function (err, res) {
           assert.equal(res.status, 200);
-          assert.deepEqual(res.body, { error: 'could not update', _id: 'invalidid123' });
+          assert.deepEqual(res.body, { error: 'could not update', _id: 'invalid_id123' });
           done();
         });
     });
